@@ -6,7 +6,7 @@ node {
 	def GIT_COMMIT
   stage ('cloning the repository'){
 	  
-      def scm = git 'https://github.com/jitendra-git123/jpetstore-web-comp'
+      def scm = git 'https://github.com/jitendra-git123/jpetstore-web-comp-aws'
 	  GIT_COMMIT = sh(returnStdout: true, script: "git rev-parse HEAD").trim()
 	  echo "COMMITID ${GIT_COMMIT}"
 	  //echo "BBBB ${scm}"
@@ -52,16 +52,16 @@ node {
                        
             echo("************************** Test Result Uploaded Successful to Velocity****************************")
 	
-	stage('SonarQube Analysis'){
-		def mvnHome = tool name : 'Maven3.6.0', type:'maven'
-		//def path = tool name: 'gradle-4.7', type: 'gradle'
+	//stage('SonarQube Analysis'){
+	//	def mvnHome = tool name : 'Maven3.6.0', type:'maven'
+	//	//def path = tool name: 'gradle-4.7', type: 'gradle'
 		
-		withSonarQubeEnv('sonar-server'){
-			 //"SONAR_USER_HOME=/opt/bitnami/jenkins/.sonar ${mvnHome}/bin/mvn sonar:sonar"
-			sh  "mvn sonar:sonar -Dsonar.projectName=JpetStore-web"
-			//sh "${path}/bin/gradle --info -Dsonar.host.url=http://localhost:9000 sonarqube"
-		}
-	}
+	//	withSonarQubeEnv('sonar-server'){
+	//		 //"SONAR_USER_HOME=/opt/bitnami/jenkins/.sonar ${mvnHome}/bin/mvn sonar:sonar"
+	//		sh  "mvn sonar:sonar -Dsonar.projectName=JpetStore-web"
+	//		//sh "${path}/bin/gradle --info -Dsonar.host.url=http://localhost:9000 sonarqube"
+	//	}
+	//}
 	
 	
 
