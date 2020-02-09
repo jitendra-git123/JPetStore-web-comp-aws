@@ -1,1 +1,1 @@
-# JPetStore-web-comp-aws updated 9-Feb-2020
+# JPetStore-web-comp-aws updated 9-Feb
