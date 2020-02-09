@@ -73,17 +73,17 @@ echo "(*******)"
 	        siteName: 'UCD_Local',
 	        component: [
 	            $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
-	            componentName: 'JPetStoreUOB-web-Component',
+	            componentName: 'Distributed-web-Component',
 	            createComponent: [
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock',
 	                componentTemplate: '',
-	                componentApplication: 'JPetStore-UOB'
+	                componentApplication: 'HCL-Distributed'
 	            ],
 	            delivery: [
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push',
 	                pushVersion: '1.0.${BUILD_NUMBER}',
 	                //baseDir: '/var/jenkins_home/workspace/JPetStore/target',
-			 baseDir: '/var/lib/jenkins/workspace/UOB/JPetStore-web-comp/target/',
+			 baseDir: '/var/lib/jenkins/workspace/HCL-Demo/Distributed-JPetStore-web/target/',
 	                fileIncludePatterns: '*.war',
 	                fileExcludePatterns: '',
 	               // pushProperties: 'jenkins.server=Jenkins-app\njenkins.reviewed=false',
