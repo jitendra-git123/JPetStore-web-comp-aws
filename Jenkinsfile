@@ -98,7 +98,7 @@ echo "(*******)"
 	//	}
 	echo "(*******)"
 	  //echo "Demo1234 ${Distributed-web-Component_VersionId}"
-	  def newComponentVersionId = "${Distributed-web-Component_VersionId}"
+	  def newComponentVersionId = "${JPetStoreUOB-web-Component_VersionId}"
 	  echo "git commit ${newComponentVersionId}"
 //	  //step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "Altoro", requestor: "admin", id: "${newComponentVersionId}" )
 // step($class: 'UploadBuild', 
