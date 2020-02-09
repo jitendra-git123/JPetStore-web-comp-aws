@@ -101,14 +101,14 @@ echo "(*******)"
 	  def newComponentVersionId = "${Distributed-web-Component_VersionId}"
 	  echo "git commit ${GIT_COMMIT}"
 //	  //step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "Altoro", requestor: "admin", id: "${newComponentVersionId}" )
- step($class: 'UploadBuild', 
-       tenantId: "5ade13625558f2c6688d15ce", 
-       revision: "${GIT_COMMIT}", 
-       appName: "HCL-Distributed", 
-       requestor: "admin", 
-       id: "${newComponentVersionId}", 
-       versionName: "1.0.${BUILD_NUMBER}"
-      )
+// step($class: 'UploadBuild', 
+  //     tenantId: "5ade13625558f2c6688d15ce", 
+    //   revision: "${GIT_COMMIT}", 
+      // appName: "HCL-Distributed", 
+       //requestor: "admin", 
+       //id: "${newComponentVersionId}", 
+       //versionName: "1.0.${BUILD_NUMBER}"
+      //)
      
 //	//echo "Demo12345 ${newComponentVersionId}"
 //	//sleep 25
