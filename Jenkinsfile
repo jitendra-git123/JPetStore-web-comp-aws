@@ -73,7 +73,7 @@ echo "(*******)"
 	        siteName: 'UCD_Local',
 	        component: [
 	            $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
-	            componentName: 'Distributed-web-Component',
+	            componentName: 'DistributedWebComp',
 	            createComponent: [
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock',
 	                componentTemplate: '',
@@ -96,9 +96,9 @@ echo "(*******)"
 	//	readFile('env.txt').split("\r?\n").each {
 	//	println it
 	//	}
-	echo "(*******)"
-	  //echo "Demo1234 ${Distributed-web-Component_VersionId}"
-	  def newComponentVersionId = "${JPetStoreUOB-web-Component_VersionId}"
+	  echo "(*******)"
+	  echo "Demo1234 ${DistributedWebComp_VersionId}"
+	  def newComponentVersionId = "${DistributedWebComp_VersionId}"
 	  echo "git commit ${newComponentVersionId}"
 //	  //step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "Altoro", requestor: "admin", id: "${newComponentVersionId}" )
 // step($class: 'UploadBuild', 
