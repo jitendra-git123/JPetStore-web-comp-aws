@@ -97,8 +97,8 @@ echo "(*******)"
 	//	println it
 	//	}
 	  echo "(*******)"
-	  echo "Demo1234 ${DistributedWebComp_VersionId}"
-	  def newComponentVersionId = "${DistributedWebComp_VersionId}"
+	  echo "Demo1234 ${Distributed_Web_Comp_VersionId}"
+	  def newComponentVersionId = "${Distributed_Web_Comp_VersionId}"
 	  echo "git commit ${newComponentVersionId}"
 //	  //step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "Altoro", requestor: "admin", id: "${newComponentVersionId}" )
 // step($class: 'UploadBuild', 
