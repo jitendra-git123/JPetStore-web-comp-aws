@@ -33,22 +33,22 @@ node {
   }
 
 	echo("************************** Test Result Upload Started to Velocity****************************")
-    //                    try{
-      //                  step([$class: 'UploadJUnitTestResult',
-        //                    properties: [
-          //              // Need to change the path of the test result xml result required.               
-            //                    filePath: "target/surefire-reports/TEST-org.mybatis.jpetstore.service.OrderServiceTest.xml",
-              //                  tenant_id: "5ade13625558f2c6688d15ce",
-                //                appName: "JPetStore-velocity",
-                  //              //appExtId: "4b006cdb-0e50-43f2-ac87-a7586a65389e",
+                        try{
+                        step([$class: 'UploadJUnitTestResult',
+                            properties: [
+                        // Need to change the path of the test result xml result required.               
+                                filePath: "target/surefire-reports/TEST-org.mybatis.jpetstore.service.OrderServiceTest.xml",
+                                tenant_id: "5ade13625558f2c6688d15ce",
+                                appName: "JPetStore-velocity",
+                                //appExtId: "4b006cdb-0e50-43f2-ac87-a7586a65389e",
 			//	appExtId: "acdfae67-616f-43e5-8872-2cfa3aa583de",
 			//	//appId: "acdfae67-616f-43e5-8872-2cfa3aa583de",    
-                          //      name: "Executed in JUnit - 2.0.${BUILD_NUMBER}",
-                            //    testSetName: "Junit Test Run from Jenkins"]
+                                name: "Executed in JUnit - 1.0.${BUILD_NUMBER}",
+                                testSetName: "Junit Test Run from Jenkins"]
                            
-                      //  ])}catch(e){
-                      //  throw e
-                      //  }
+                        ])}catch(e){
+                        throw e
+                        }
                        
             echo("************************** Test Result Uploaded Successful to Velocity****************************")
 	
@@ -96,19 +96,19 @@ echo "(*******)"
 	//	readFile('env.txt').split("\r?\n").each {
 	//	println it
 	//	}
-//	echo "(*******)"
-//	  echo "Demo1234 ${JPetStorevelocityComponent_VersionId}"
-//	  def newComponentVersionId = "${JPetStorevelocityComponent_VersionId}"
-//	  echo "git commit ${GIT_COMMIT}"
+	echo "(*******)"
+	  echo "Demo1234 ${Distributed-web-Component_VersionId}"
+	  def newComponentVersionId = "${Distributed-web-Component_VersionId}"
+	  echo "git commit ${GIT_COMMIT}"
 //	  //step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "Altoro", requestor: "admin", id: "${newComponentVersionId}" )
-// step($class: 'UploadBuild', 
-  //     tenantId: "5ade13625558f2c6688d15ce", 
-    //   revision: "${GIT_COMMIT}", 
-      // appName: "JPetStore-velocity", 
-    //   requestor: "admin", 
-   //    id: "${newComponentVersionId}", 
-   //    versionName: "2.0.${BUILD_NUMBER}"
-   //   )
+ step($class: 'UploadBuild', 
+       tenantId: "5ade13625558f2c6688d15ce", 
+       revision: "${GIT_COMMIT}", 
+       appName: "HCL-Distributed", 
+       requestor: "admin", 
+       id: "${newComponentVersionId}", 
+       versionName: "1.0.${BUILD_NUMBER}"
+      )
      
 //	//echo "Demo12345 ${newComponentVersionId}"
 //	//sleep 25
